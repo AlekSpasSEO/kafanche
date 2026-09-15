@@ -52,7 +52,10 @@ function isOpenNow() {
 
 if (statusText && statusDot) {
   const open = isOpenNow();
-  statusText.textContent = open ? 'Отворено сега' : 'Моментално затворено';
+  const english = document.documentElement.lang === 'en';
+  statusText.textContent = open
+    ? (english ? 'Open now' : 'Отворено сега')
+    : (english ? 'Currently closed' : 'Моментално затворено');
   statusDot.classList.toggle('closed', !open);
 }
 
