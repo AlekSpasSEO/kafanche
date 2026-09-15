@@ -110,6 +110,15 @@ button { font: inherit; }
   transition: right .25s ease;
 }
 .site-nav a:hover::after, .footer-links a:hover::after { right: 0; }
+.site-nav .lang-switch {
+  padding: .18rem .48rem;
+  color: var(--paper);
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+.site-nav .lang-switch::after { display: none; }
+.site-nav .lang-switch:hover { color: var(--ink); background: var(--mint); }
 .header-order {
   padding: .72rem 1.05rem;
   color: var(--paper);
